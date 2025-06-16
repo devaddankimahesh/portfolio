@@ -36,6 +36,10 @@ body {
     /* border: 1px solid #00b3db; */
     /* border-radius: 10px; */
 }
+/* Make navbar toggler icon white */
+.navbar-toggler-icon {
+    filter: invert(1) brightness(200%);
+}
 .textSize{
     font-size: 60px;
     margin: 50px 0px 10px;
