@@ -488,7 +488,7 @@ html::-webkit-scrollbar-thumb:hover {
     margin: 30px 15px;
   }
   .navbar-brand {
-    font-size: 18px !important;
+    font-size: 24px !important;
   }
   .nav-link {
     font-size: 16px !important;
@@ -523,7 +523,7 @@ html::-webkit-scrollbar-thumb:hover {
     flex-direction: column;
   }
   .navbar-brand {
-    font-size: 16px !important;
+    font-size: 20px !important;
   }
   .nav-link {
     font-size: 14px !important;
