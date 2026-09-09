@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,7 +54,7 @@
             applications by using <br> Angular framework, NodeJS</p>
           <button type="button" class="btn btn-outline-info btn-download">
             <a class="resume" target="_blank"
-              href="https://drive.google.com/file/d/11z0KzpgApH4Uibi4GYEBrOtdhu4oI_Um/view?usp=drive_link">
+              href="https://drive.google.com/file/d/1aWsObJGhysnS1-_SGvtVduNC4J_mUgKr/view?usp=sharing">
               View My Resume
             </a></button>
         </div>
@@ -68,7 +69,7 @@
     <!-- <p class="text-color lh">Introduction</p> -->
     <h2 class="textAbout">About Me</h2>
     <p class="text-color">
-      Over 5+ years of professional experience, I specialize in crafting
+      Over 7+ years of professional experience, I specialize in crafting
       responsive Web Applications utilizing HTML5, CSS3, Bootstrap,
       JavaScript, Typescript, and Angular data binding. Adept at
       guaranteeing accessibility through tools like NVDA, I have
@@ -83,10 +84,39 @@
     <div class="">
       <div class="step-vertical">
         <div class="step-vertical-icon">
+          <img style="width: 35px;" src="./assets/img/tcslogo.png" alt="">
+        </div>
+        <div class="step-vertical-content">
+          <h4 class="text-white">IT Analyst Grade C2 (Angular Front-End Developer) | TCS Aug 2025 - Present</h4>
+          <p class="text-white">Angular Front-End Developer</p>
+          <ul class="text-color">
+            <li>
+              Built scalable, high-performance front-end applications using Angular and TypeScript.
+            </li>
+            <li>
+              Integrated REST APIs to enhance user interaction and real-time data updates.
+            </li>
+            <li>
+              Created reusable components and modules, improving development efficiency by 30%.
+            </li>
+            <li>
+              Reduced page load time by 30% using Lazy Loading and AOT Compilation.
+            </li>
+            <li>
+              Used AWS and Git DevOps for version control, CI/CD pipeline setup and project tracking.
+            </li>
+            <li>
+              Collaborated with team members using Agile Methodologies like Jira.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="step-vertical">
+        <div class="step-vertical-icon">
           <img style="width: 80px;" src="./assets/img/wiproLogo.png" alt="">
         </div>
         <div class="step-vertical-content">
-          <h4 class="text-white">Wipro Technologies 2019 - Present</h4>
+          <h4 class="text-white">Wipro Technologies 2019 - 2025</h4>
           <p class="text-white">Sr. Project Engineer</p>
           <p class="text-white">
           <ul class="text-color">
@@ -153,7 +183,7 @@
         <p class="text-color">HTML</p>
       </div>
       <div class="item">
-        <img width="50px" src="./assets/img/skills/CSS.png" alt="Angular" class="w-16 h-16 object-contain mb-2">
+        <img width="50px" src="./assets/img/skills/css.png" alt="Angular" class="w-16 h-16 object-contain mb-2">
         <p class="text-color">CSS</p>
       </div>
       <div class="item">
@@ -198,6 +228,16 @@
     <!-- <p class="text-white lh">My Work</p> -->
     <h2 class="textAbout">Projects</h2>
     <div class="container2">
+      <div class="box">
+        <span></span>
+        <div class="content">
+          <h2 class="pHeading">Enroll Modernization (Vanguard Project - 2025 - Present)</h2>
+          <p class="ptext">
+            Modernized legacy enrollment workflows into a responsive, high-performance Single Page Application (SPA) using Angular and TypeScript. Built dynamic, multi-step onboarding forms with reactive validation and integrated secure REST APIs for real-time identity verification, eligibility checks, and instant policy generation. Automated CI/CD deployments to AWS (S3/CloudFront) using Git-based pipelines under Agile/Scrum delivery.
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
       <div class="box">
         <span></span>
         <div class="content">
@@ -256,8 +296,33 @@
         <label for="message" class="form-label" style="color: #a8bfc1;">Message</label>
         <textarea class="form-control" id="message" rows="4" placeholder="Your message" required></textarea>
       </div>
-      <button type="submit" class="btn btn-outline-info">Send Message</button>
+      <button type="submit" class="btn btn-outline-info">Send WhatsApp Message</button>
     </form>
   </div>
+
+  <script>
+    const contactForm = document.getElementById('contactForm');
+
+    contactForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+      }
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const whatsappPhone = '918143829147';
+      const whatsappMessage = `Hello Mahesh Addanki,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+
+      const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(whatsappMessage)}`;
+
+      window.open(whatsappUrl, '_blank');
+      contactForm.reset();
+    });
+  </script>
 </body>
 </html>
